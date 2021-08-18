@@ -6,14 +6,18 @@
  */
 
  function areArraysSame(a, b) {
-    var same = true;
-  
-    for (var i = 0; i < a.length; i++) {
-      if (a[i] !== b[i]) {
-        same = false;
-        return same;
+  var same = true;
+
+  for (var i = 0; i < a.length; i++) {
+      if (a.length !== b.length) {
+          same = false;
+          return same
       }
-    }
-    console.log(same);
+      if(a[i] !== b[i]){
+          same = false;
+          return same;
+      }
   }
+  console.log(same);
+}
 
